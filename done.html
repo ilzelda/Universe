@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+  <title>Universe-Main</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1><a href="index.html">Universe</a></h1>
+  <ul>
+    <li><a href="review.html">하루점검</a></li>
+    <li><a href="interest.html">관심사</a></li>
+    <li><a href="done.html">완료</a></li>
+  </ul>
+  <div class="under_Menu">
+    <h2>완료</h2>
+    <div id="contents">
+			<form action="#">
+				<label for="all"><input type="radio" id="all" name="done" value="all" checked>전체</label>
+				<label for="book"><input type="radio" id="book" name="done" value="book">책</label> <!-- label을 지정하면클릭하여 선택할 수 있는 범위를 늘릴수 있다.-->
+				<label for="movie"><input type="radio" id="movie" name="done" value="movie">영화</label>
+				<label for="travel"><input type="radio" id="travel" name="done" value="travel">가본 곳</label>
+				<input type="text" id="keyword" name="keyword" placeholder="완료한 것들" required><!-- name attribute is used to reference elements in a JavaScript-->
+				<button type="submit">검색</button>
+			</form>
+      <p>
+        책, 영화, 맛집 등등
+      </p>
+    </div>
+  </div>
+</body>
+</html>
