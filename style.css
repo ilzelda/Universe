@@ -1,40 +1,103 @@
-h1{
-  font-size: 45px; text-align:center;
-  border-bottom: 1px solid black; margin:0px; padding:20px;
+:root{
+	color:#1C1C1BFF;
 }
-a{
-  color:black;
-  text-decoration: none;
-}
-ul{
-  border-bottom: 1px solid black; height: 38px;
-  columns:3;
+body{
+	margin-left:0px;
+	margin-right:0px;
+	display:grid;
+	grid-template-rows:2fr;
 }
 
-li{
-  list-style: none;
-  /*float:left;
-  font-size: 25px;
-  padding-left: 75px; padding-right: 75px; border-left: 1px solid black;*/
-   border-right: 1px solid black;*/
+nav{
+	position:fixed;
+	top:0px;
+	display:block;/* ? */ 
+	width:100%;
+	z-index:2; /*스크롤 했을때 가리기*/
 }
+h1{
+  font-size: 45px; text-align: center;
+  margin:0px; padding:20px;
+	background-color: white;
+}
+#menu1{
+	background-color: #F7CED7FF;
+}
+#menu2{
+	background-color: #F99FC9FF;
+}
+#menu3{
+	background-color: #F7CED7FF;
+}
+a{
+  color:inherit; /*root color 받기*/
+  text-decoration: none; /*언더바 없애기*/
+}
+ul{
+	margin: 0px; padding-left: 0px;
+  columns:3;
+	width:100%;
+}
+li{
+	list-style-type: none;
+	margin-right: -16px; padding: 0px;
+	text-align: center; font-size: 25px; 
+}
+
+
 .under_Menu{
+	position:absolute; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor*/
+	top:133px;
   display: grid;
   grid-template-columns: 220px 1fr;
 }
+/*class는 복수의 요소에 적용할때->한 문서에 여러번 사용가능, 하나의 요소에 여러 class를 지정할수 있음 ex- class="class1 class2"*/
 h2{
+	background-color:#EF6079FF;
   text-align: center;
-  border-right: 1px solid black;
+	margin: 0px 0px 0px 0px; padding: 30px 10px 10px 10px;
+	height:100vh;
+	z-index:1;
 }
-#contents{
-  padding-left: 25px;
+.contents{
+	/*id는 단하나의 요소에 적용할때->한 문서에 한번만 사용가능, class보다 우선순위 높음*/
+  padding: 20px;
+	display:block;
 }
+
+/***********************interest***********************/
+#lastorigin{
+	background-color: grey;
+	border-radius:15px;
+	display: flex;
+	height: 250px;
+	flex-direction: column;
+	justify-content: space-evenly; /*main axis*/ 
+	align-items: center; /*cross axis*/
+	flex-wrap: wrap; /*item들이 많을 때 밖으로 안나가게 해준다*/
+}
+#lo_home{
+	background-color: #2F4F4F;	
+	border-radius: 100px;
+}
+#lo_unit{
+	background-color: #708090;
+}
+#lo_map{
+	background-color: #C0C0C0;
+}
+
+/***********************interest***********************/
 @media(max-width:750px){
   .under_Menu{
     display: block;
   }
   h2{
-    border-right: none;
-    border-bottom: 1px solid black;
+		width: 100vw;
+		height:40px;
   }
 }
+
+/*
+style element 우선순위: body< class 중 style에 나중에 선언된것< id< inline으로 선언된것< !important
+*/
