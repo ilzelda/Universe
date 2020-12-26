@@ -2,23 +2,25 @@
 	color:#1C1C1BFF;
 }
 body{
-	margin-left:0px;
-	margin-right:0px;
-	display:grid;
-	grid-template-rows:2fr;
+	margin-left:0px; margin-right:0px;
 }
 
 nav{
 	position:fixed;
 	top:0px;
-	display:block;/* ? */ 
+	/* ? */ 
 	width:100%;
 	z-index:2; /*스크롤 했을때 가리기*/
 }
 h1{
   font-size: 45px; text-align: center;
-  margin:0px; padding:20px;
+  width: 100%; margin:0px; padding:20px;
 	background-color: white;
+}
+ul{
+	margin: 0px; padding-left: 0px;
+  columns: 3;
+	width:100%;
 }
 #menu1{
 	background-color: #F7CED7FF;
@@ -29,14 +31,8 @@ h1{
 #menu3{
 	background-color: #F7CED7FF;
 }
-a{
-  color:inherit; /*root color 받기*/
-  text-decoration: none; /*언더바 없애기*/
-}
-ul{
-	margin: 0px; padding-left: 0px;
-  columns:3;
-	width:100%;
+nav a{
+  color:inherit; /*root color 받기*/ text-decoration: none; /*언더바 없애기*/
 }
 li{
 	list-style-type: none;
@@ -44,19 +40,17 @@ li{
 	text-align: center; font-size: 25px; 
 }
 
-
 .under_Menu{
-	position:absolute; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor*/
+	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor(relative) https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2*/
 	top:133px;
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 200px 80%;
 }
 /*class는 복수의 요소에 적용할때->한 문서에 여러번 사용가능, 하나의 요소에 여러 class를 지정할수 있음 ex- class="class1 class2"*/
 h2{
 	background-color:#EF6079FF;
   text-align: center;
-	margin: 0px 0px 0px 0px; padding: 30px 10px 10px 10px;
-	height:100vh;
+	margin: 0px; padding: 30px 10px 10px 10px; height:100vh;
 	z-index:1;
 }
 .contents{
@@ -64,8 +58,42 @@ h2{
   padding: 20px;
 	display:block;
 }
+/***********************V index V***********************/
+#contents_index{
+	left: 200px; margin: 15px; justify-self: center;
+	display: grid;
+	grid-template-rows: 1fr 5fr 1.5fr;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: 
+		"deathly_clock deathly_clock" 
+		"space_nav n_contents" 
+		"plans plans";
+	grid-gap: 30px;
+		
+}
+#deathly_clock{
+	grid-area: deathly_clock;
+	background-color: grey;
+}
+#space_nav{
+	grid-area: space_nav;
+	border: solid;
+}
+#space_nav figcaption{
+	color:white; background-color: black;
+}
+#n_contents{
+	grid-area: n_contents;
+	background-color: yellow;
+}
+#plans{
+	grid-area: plans;
+	background-color: skyblue;
+}
+/***********************^ index ^***********************/
 
-/***********************interest***********************/
+
+/***********************V interest V***********************/
 #lastorigin{
 	background-color: grey;
 	border-radius:15px;
@@ -87,7 +115,9 @@ h2{
 	background-color: #C0C0C0;
 }
 
-/***********************interest***********************/
+/***********************^ interest ^***********************/
+
+
 @media(max-width:750px){
   .under_Menu{
     display: block;
@@ -100,4 +130,5 @@ h2{
 
 /*
 style element 우선순위: body< class 중 style에 나중에 선언된것< id< inline으로 선언된것< !important
+justify-행방향관련 align-열방향관련 self: item개별적 items:container 안의 모든 item 관련
 */
