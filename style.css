@@ -41,7 +41,9 @@ li{
 }
 
 .under_Menu{
-	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor(relative) https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2*/
+	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor absolute는 normal flow 에서 제거됨
+	relative는 top:100px 같은 것을 쓸수 있음  
+	https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2*/
 	top:133px;
   display: grid;
   grid-template-columns: 200px 80%;
@@ -60,10 +62,10 @@ h2{
 }
 /***********************V index V***********************/
 #contents_index{
-	left: 200px; margin: 15px; justify-self: center;
+	left: 200px; margin: 15px; 
 	display: grid;
 	grid-template-rows: 1fr 5fr 1.5fr;
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 2fr minmax(auto, 200px);
 	grid-template-areas: 
 		"deathly_clock deathly_clock" 
 		"space_nav n_contents" 
