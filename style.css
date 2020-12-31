@@ -41,27 +41,35 @@ li{
 }
 
 .under_Menu{
-	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor absolute는 normal flow 에서 제거됨
+	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor. absolute는 normal flow 에서 제거됨
 	relative는 top:100px 같은 것을 쓸수 있음  
 	https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2*/
 	top:133px;
   display: grid;
   grid-template-columns: 200px 80%;
+	grid-template-areas: "bar" "contents";
 }
 /*class는 복수의 요소에 적용할때->한 문서에 여러번 사용가능, 하나의 요소에 여러 class를 지정할수 있음 ex- class="class1 class2"*/
-h2{
+.bar{
+	grid-area: "bar";
+	display: flex;
+	flex-direction: column;
 	background-color:#EF6079FF;
-  text-align: center;
 	margin: 0px; padding: 30px 10px 10px 10px; height:100vh;
 	z-index:1;
 }
+h2{
+  text-align: center;
+}
 .contents{
 	/*id는 단하나의 요소에 적용할때->한 문서에 한번만 사용가능, class보다 우선순위 높음*/
+	grid-area: "contents";
   padding: 20px;
 	display:block;
 }
 /***********************V index V***********************/
 #contents_index{
+	grid-area: "contents";
 	left: 200px; margin: 15px; 
 	display: grid;
 	grid-template-rows: 1fr 5fr 1.5fr;
@@ -91,6 +99,7 @@ h2{
 #plans{
 	grid-area: plans;
 	background-color: skyblue;
+	height: auto;
 }
 /***********************^ index ^***********************/
 
@@ -100,7 +109,7 @@ h2{
 	background-color: grey;
 	border-radius:15px;
 	display: flex;
-	height: 250px;
+	width: 250px; height: 250px;
 	flex-direction: column;
 	justify-content: space-evenly; /*main axis*/ 
 	align-items: center; /*cross axis*/
@@ -124,9 +133,8 @@ h2{
   .under_Menu{
     display: block;
   }
-  h2{
-		width: 100vw;
-		height:40px;
+  .bar{
+		width: 100vw; height:80px; padding=0px;
   }
 }
 

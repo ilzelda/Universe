@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" href="images/solar_system.png">
+	<script src="script.js"></script>
 </head>
 <body>
 	<nav>
@@ -16,7 +17,10 @@
   		</ul>
 	</nav>
 	<div class="under_Menu">
-    <h2>Main<hr></h2>
+    <div class="bar">
+			<h2>Main<hr></h2>
+			<label for="themecolorButton">Change Theme to:<input type="button" id="themecolorButton" value="green" onclick="changeThemecolor(this,'#95DBE5FF','#078282FF','#339E66FF')"></label>
+		</div>
     <div id="contents_index"> 
 			<div id="deathly_clock">
 			</div>
@@ -32,6 +36,11 @@
 			</div>
 			
 			<div id="plans">
+				<form id="add_plan" action="#">
+					<label for="plan_name">추가할 계획:<input type="text" id="plan_name" name="plan_name" required></label>
+					<label for="goal_date">목표일자<input type="date" id="goal_date" name="goal_date" required></label>
+					<button type="submit">추가</button>
+				</form>
 			</div>
 			
 			<!--
@@ -39,7 +48,7 @@
         메인페이지
         들어갈것들:
         <br> 1.글수비교하는 아이콘-원형, 그에 따른 색변화
-        <br> 2.장기계획-막대그래프
+        <br> 2.장기계획-막대그래프: 
 				<br> 3.남은시간
       </p>
       단락확인(p태크 뒤에붙임)
