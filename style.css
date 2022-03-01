@@ -8,7 +8,7 @@ body{
 nav{
 	position:fixed;
 	top:0px;
-	/* ? */ 
+	/* ? */
 	width:100%;
 	z-index:2; /*스크롤 했을때 가리기*/
 }
@@ -37,12 +37,12 @@ nav a{
 li{
 	list-style-type: none;
 	margin-right: -16px; padding: 0px;
-	text-align: center; font-size: 25px; 
+	text-align: center; font-size: 25px;
 }
 
 .under_Menu{
 	position:relative; /*relative 와 absolute 의 차이: normal flow에 관련 있느냐 없느냐. absolute is locked to closest positioned ancestor. absolute는 normal flow 에서 제거됨
-	relative는 top:100px 같은 것을 쓸수 있음  
+	relative는 top:100px 같은 것을 쓸수 있음
 	https://www.w3schools.com/cssref/tryit.asp?filename=trycss_position2*/
 	top:133px;
   display: grid;
@@ -68,18 +68,18 @@ h2{
 	display:block;
 }
 /***********************V index V***********************/
-#contents_index{
+#contents_ofindex{
 	grid-area: "contents";
-	left: 200px; margin: 15px; 
+	left: 200px; margin: 15px;
 	display: grid;
 	grid-template-rows: 1fr 5fr 1.5fr;
 	grid-template-columns: 2fr minmax(auto, 200px);
-	grid-template-areas: 
-		"deathly_clock deathly_clock" 
-		"space_nav n_contents" 
+	grid-template-areas:
+		"deathly_clock deathly_clock"
+		"space_nav n_contents"
 		"plans plans";
 	grid-gap: 30px;
-		
+
 }
 #deathly_clock{
 	grid-area: deathly_clock;
@@ -111,12 +111,12 @@ h2{
 	display: flex;
 	width: 250px; height: 250px;
 	flex-direction: column;
-	justify-content: space-evenly; /*main axis*/ 
+	justify-content: space-evenly; /*main axis*/
 	align-items: center; /*cross axis*/
 	flex-wrap: wrap; /*item들이 많을 때 밖으로 안나가게 해준다*/
 }
 #lo_home{
-	background-color: #2F4F4F;	
+	background-color: #2F4F4F;
 	border-radius: 100px;
 }
 #lo_unit{

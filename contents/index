@@ -1,0 +1,22 @@
+<div id="contents_ofindex">
+  <div id="deathly_clock">
+  </div>
+
+  <div id="space_nav">
+    <figure>
+      <img src="images/solar_system.png" alt="it should be solar system img" width="200" height="200">
+      <figcaption>행성위에 호버링하면 호버링한 행성으로 줌인  image map?</figcaption>
+    </figure>
+  </div>
+
+  <div id="n_contents">
+  </div>
+
+  <div id="plans">
+    <form id="add_plan" action="#" method="post"> <!-post는 데이터를 쿼리스트링에 안보여줌->
+      <label for="plan_name">추가할 계획:<input type="text" id="plan_name" name="plan_name" required></label>
+      <label for="goal_date">목표일자<input type="date" id="goal_date" name="goal_date" required></label>
+      <button type="submit">추가</button>
+    </form>
+  </div>
+</div>

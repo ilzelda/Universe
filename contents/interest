@@ -1,0 +1,11 @@
+<div class="contents">
+  <p>
+    vr, 닌텐도, 공부한것들, 번역
+  </p>
+  <div id="lastorigin">
+    <h3>라스트오리진</h3>
+    <div id="lo_home"><a href="http://lo.swaytwig.com/"><img style=" max-width:100%; height:auto" src="https://lastorigin-wiki-assets.s3.ap-northeast-2.amazonaws.com/icon.png" alt="라오 로고"></a></div>
+    <div id="lo_unit"><a href="http://lo.swaytwig.com/units">전투원정보</a></div>
+    <div id="lo_map"><a href="https://lastoriginmap.github.io/">지역별 철충지도</a></div>
+  </div>
+</div>
